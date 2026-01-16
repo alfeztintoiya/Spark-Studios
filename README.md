@@ -144,6 +144,6 @@ No sensitive information is committed to the repository
 ## 🙋‍♂️ **Support**
 
 - 📧 **Email:** [alfez.tintoiya25@domain.com](mailto:your-email@domain.com)
-- ![alt text](image.png) **Portfolio:** [https://alfeztintoiya.netlify.app/]
+- 💻 **Portfolio:** [https://alfeztintoiya.netlify.app/]
 - 🐛 **Issues:** [GitHub Issues](https://github.com/yourusername/resume-analyzer/issues)
 - 💬 **Discussions:** [GitHub Discussions](https://github.com/yourusername/resume-analyzer/discussions)
