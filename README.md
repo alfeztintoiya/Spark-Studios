@@ -31,14 +31,14 @@ The final output is a structured **JSON report** containing research details and
 ```bash
 SPARK_STUDIOS/
 │
-├── main.py # Main application logic
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-├── output.json # Generated output file
-├── .gitignore # Ignored files and folders
-├── .env.local # Sample environment config (API key placeholder)
-├── venv/ # Virtual environment (not committed)
-└── .git/ # Git repository
+├── main.py #main application
+├── requirements.txt #python dependencies
+├── README.md #project documentation
+├── output.json #generated output file
+├── .gitignore #ignored files and folders
+├── .env.local #sample environment config (API key placeholder)
+├── venv/ #virtual environment (not committed)
+└── .git/ #git repository
 ```
 ## Technologies Used
 
