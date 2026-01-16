@@ -7,6 +7,9 @@ from dateutil import parser as date_parser
 from typing import List,Dict
 from google import genai
 from zoneinfo import ZoneInfo
+from dotenv import load_dotenv
+
+load_dotenv()
 
 #configuration
 ARXIV_API_URL="http://export.arxiv.org/api/query"
@@ -14,7 +17,19 @@ SEARCH_QUERY="energy AND machine learning"
 MAX_RESULTS=20
 DAYS_LIMIT=180
 TOP_K=5
-GEMINI_MODEL="gemini-3-pro-preview"
+GEMINI_MODEL="gemini-2.5-flash"
+
+#gemini setup
+def get_gemini_client():
+    api_key = os.getenv("GEMINI_API_KEY")
+
+    if not api_key:
+        raise EnvironmentError("GEMINI_API_KEY is not set. Please set it as environment variable")
+    
+    try:
+        return genai.Client(api_key=api_key)
+    except Exception as e:
+        raise RuntimeError(f"Failed to initialize gemini client: {e}")
 
 #fetch arxiv papers
 def fetch_arxiv_papers() -> List:
@@ -51,7 +66,7 @@ def filter_recent_papers(entries: List) -> List[Dict]:
         try:
             published_date = date_parser.parse(entry.published)
             days_diff = (now-published_date).days
-
+            published_date = published_date.isoformat()
             if days_diff > DAYS_LIMIT:
                 continue
 
@@ -93,3 +108,56 @@ def summarize_with_gemini(client: genai.Client,abstract: str)->str:
         return response.text.strip()
     except Exception as e:
         return f"error generating summary: {e}"
+
+#final report
+def build_report(client: genai.Client,papers: List[Dict])->List[Dict]:
+    report = []
+    
+    for paper in papers:
+        print(f"summary: {paper['title'][:60]}...")
+        summary = summarize_with_gemini(client,paper["abstract"])
+
+        report.append({
+            "title":paper["title"],
+            "authors":paper["authors"],
+            "published_date":"Date: "+ paper["published_date"][0:10]+" Time: "+paper["published_date"][11:],
+            "pdf_link":paper["pdf_link"],
+            "llm_summary":summary,
+        })
+
+    return report
+
+def main():
+    print("starting energy tech innovations scout..")
+
+    try:
+        client = get_gemini_client()
+    except Exception as e:
+        print(e)
+        return
+    
+    entries = fetch_arxiv_papers()
+    if not entries:
+        print(f"No paper to process.")
+        return
+    
+    filtered_papers = filter_recent_papers(entries)
+    if not filtered_papers:
+        print(f"no relevant recent papers found.")
+        return
+    
+    report = build_report(client,filtered_papers)
+    
+    filename = str("output.json")
+
+    try:
+        with open(filename,'w',encoding='utf-8') as f:
+            json.dump(report,f,indent=2)
+        print(f"output successfully saved to {filename}")
+    except IOError as e:
+        print(f"Failed to save output in file: {e}")
+        return
+    
+    print("process completed successfully.")
+
+main()

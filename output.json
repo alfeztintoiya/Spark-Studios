@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Distributed Perceptron under Bounded Staleness, Partial Participation, and Noisy Communication",
+    "authors": [
+      "Keval Jain",
+      "Anant Raj",
+      "Saurav Prakash",
+      "Girish Varma"
+    ],
+    "published_date": "Date: 2026-01-15 Time: 18:56:54+00:00",
+    "pdf_link": "https://arxiv.org/pdf/2601.10705v1",
+    "llm_summary": "This research addresses the challenges of training client-server **Perceptrons** via **iterative parameter mixing (IPM-style averaging)** in federated and distributed deployments, specifically focusing on stale updates, partial client participation, and noisy communication. The **key innovation** is a novel server-side aggregation rule called \"staleness-bucket aggregation with padding,\" which deterministically enforces a prescribed staleness profile. This approach provides theoretical performance guarantees, leading to **more robust and practical distributed machine learning** by ensuring stability and bounding errors even under significant real-world system effects."
+  },
+  {
+    "title": "H-EFT-VA: An Effective-Field-Theory Variational Ansatz with Provable Barren Plateau Avoidance",
+    "authors": [
+      "Eyad I. B Hamid"
+    ],
+    "published_date": "Date: 2026-01-15 Time: 15:01:16+00:00",
+    "pdf_link": "https://arxiv.org/pdf/2601.10479v1",
+    "llm_summary": "This research introduces the H-EFT Variational Ansatz (H-EFT-VA), a novel Variational Quantum Algorithm (VQA) architecture inspired by Effective Field Theory (EFT) that uses a hierarchical \"UV-cutoff\" on initialization. This key innovation uniquely overcomes the Barren Plateau phenomenon by guaranteeing an inverse-polynomial gradient variance while maintaining crucial volume-law entanglement and expressibility. The approach significantly improves VQA training, demonstrating a 109x faster energy convergence and 10.7x higher ground-state fidelity in benchmarks like the Transverse Field Ising model, thereby enabling more reliable and efficient quantum simulations for complex real-world problems."
+  },
+  {
+    "title": "The transformation mechanisms among cuboctahedra, Ino's decahedra and icosahedra structures of magic-size gold nanoclusters",
+    "authors": [
+      "Ehsan Rahmatizad Khajehpasha",
+      "Mohammad Ismaeil Safa",
+      "Nasrin Eyvazi",
+      "Marco Krummenacher",
+      "Stefan Goedecker"
+    ],
+    "published_date": "Date: 2026-01-15 Time: 14:29:17+00:00",
+    "pdf_link": "https://arxiv.org/pdf/2601.10434v1",
+    "llm_summary": "This research utilizes a high-accuracy machine-learned potential, trained on Density Functional Theory (DFT) data, to investigate the complex structural transformations of gold nanoclusters. Key innovations include the discovery of new, lower-energy global minima for larger gold nanoclusters, challenging previously accepted structures, and the identification of novel, lower-barrier asymmetric transformation pathways leading to amorphous icosahedra. This enhanced fundamental understanding of nanocluster stability and dynamics, which provides transformation times in agreement with experiments, is crucial for designing and optimizing their performance in real-world applications such as catalysis, sensing, and biomedical technologies."
+  },
+  {
+    "title": "Reduction of thermodynamic uncertainty by a virtual qubit",
+    "authors": [
+      "Yang Li",
+      "Fu-Lin Zhang"
+    ],
+    "published_date": "Date: 2026-01-15 Time: 14:24:01+00:00",
+    "pdf_link": "https://arxiv.org/pdf/2601.10429v1",
+    "llm_summary": "This research investigates the Thermodynamic Uncertainty Relation (TUR) in quantum thermal-machine models whose operation relies on coherent coupling within a virtual qubit. A key innovation is demonstrating that while steady-state currents and entropy production behave classically, current fluctuations acquire a purely quantum correction from coherence, allowing the TUR to be decomposed into classical and coherent contributions. This understanding of how to identify optimization conditions and potentially surpass classical TUR bounds near the reversible limit has significant real-world impact for improving performance and enabling optimization in various quantum technologies."
+  },
+  {
+    "title": "Advanced Manufacturing with Renewable and Bio-based Materials: AI/ML workflows and Process Optimization",
+    "authors": [
+      "Rigoberto Advincula",
+      "Jihua Chen"
+    ],
+    "published_date": "Date: 2026-01-15 Time: 13:36:30+00:00",
+    "pdf_link": "https://arxiv.org/pdf/2601.10382v1",
+    "llm_summary": "This research proposes a paradigm shift in advanced manufacturing of bio-derived materials by integrating **first-principle-based AI/ML models, Self-Driving Laboratories (SDLs), and additive manufacturing (3D printing)**. Key innovations include AI/ML workflows for optimizing material synthesis with self-correcting 3D printing and in-situ characterization, further enhanced by training data from Large Language Models (LLMs) and generative AI (DL, RL, DRL) for continuous improvement. This approach aims to dramatically increase industry profitability while significantly reducing waste, energy consumption, and gas emissions, thereby enabling a more sustainable circular economy through the creation of durable, high-value bio-based products."
+  }
+]
