@@ -28,6 +28,7 @@ The final output is a structured **JSON report** containing research details and
 ---
 
 ## Project Structure
+```bash
 SPARK_STUDIOS/
 │
 ├── main.py # Main application logic
@@ -38,7 +39,7 @@ SPARK_STUDIOS/
 ├── .env.local # Sample environment config (API key placeholder)
 ├── venv/ # Virtual environment (not committed)
 └── .git/ # Git repository
-
+```
 ## Technologies Used
 
 - Python3
